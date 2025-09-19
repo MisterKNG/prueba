@@ -1,15 +1,19 @@
 const yesBtn = document.querySelector('#yesBtn');
+const noBtn = document.querySelector('#noBtn');
+const nothingBtn = document.querySelector('#nothingBtn');
 
 yesBtn.addEventListener('click',function() {
-    alert('Saía que ibas a decir como amigo jeje Te amo mi estimada <3')
+    alert('Sabía que ibas a decir TE AMO ❤️🥹✨');
 });
 
-const noBtn = document.querySelector('#noBtn');
+nothingBtn.addEventListener('click', function() {
+    alert('JAJA sabía que me quieres y me amas a la vez 😍💖');
+});
 
 noBtn.addEventListener('mouseover', function () {
-    const randomX = parseInt(Math.random()*100);
-    const randomY = parseInt(Math.random()*100);
-    noBtn.computedStyleMap.setProperty('top',randomY+'%');
-    noBtn.computedStyleMap.setProperty('left',randomX+'%');
-    noBtn.computedStyleMap.setProperty('transform',`translate(-${randomX}%,-${randomY}%)`);
-})
+    const randomX = Math.floor(Math.random() * 80); // max 80% para no salir de pantalla
+    const randomY = Math.floor(Math.random() * 80);
+    noBtn.style.position = 'absolute';
+    noBtn.style.top = randomY + "%";
+    noBtn.style.left = randomX + "%";
+});
