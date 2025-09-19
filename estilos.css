@@ -1,28 +1,91 @@
 *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-.contenedor{
-    background: aqua;
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
     text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-p{
-    font-size: xx-large;
-    padding: 15%;
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
 }
 
-button{
-    font-size: xx-large;
-    padding: 0.75em;
+p {
+    font-size: 1.8em;
+    margin-bottom: 30px;
 }
 
- #yesBtn{
-    transform: translate(-100%,0);
- }
+.botones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
- #noBtn{
+button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+}
+
+#yesBtn {
+    background: #ff4d6d;
+    color: white;
+}
+
+#yesBtn:hover {
+    background: #ff8095;
+    transform: scale(1.1);
+}
+
+#noBtn {
+    background: #ffd166;
     position: absolute;
- }
+    color: #333;
+}
+
+#nothingBtn {
+    background: #06d6a0;
+    color: white;
+}
+
+#nothingBtn:hover {
+    background: #07f5b8;
+    transform: scale(1.1);
+}
+
+/* Fondo con corazones animados */
+body::before {
+    content: "❤️";
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s infinite;
+    top: 20%;
+    left: 10%;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+}
